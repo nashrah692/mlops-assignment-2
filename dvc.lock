@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  train_model:
+    cmd: python src/train.py
+    deps:
+    - path: data/dataset.csv
+      hash: md5
+      md5: 4c9ff38a705087980361d06cceab8c16
+      size: 270
+    - path: src/train.py
+      hash: md5
+      md5: aebb3cd21949062146615a30e5a6d35e
+      size: 510
+    outs:
+    - path: models/model.pkl
+      hash: md5
+      md5: 533e8b59106e8f14967437b5682c0dae
+      size: 955
